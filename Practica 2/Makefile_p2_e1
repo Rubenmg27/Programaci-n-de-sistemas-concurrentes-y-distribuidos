@@ -1,0 +1,31 @@
+#------------------------------------------------------------------------------
+# File:   Makefile_p2_e1
+# Authors:Sergio Salesa Quintanilla NIP:811019
+#         Rubén Martín González NIP:841886
+# Date:   16 de octubre de 2022
+# Coms:   Makefile para la práctica 2 de PSCD
+#         "make -f Makefile_p2_e1" compilará y generará el ejecutable "main_p2_e1"
+#         "make -f Makefile_p2_e1 clean" borra todo lo genearado, si existe
+#------------------------------------------------------------------------------
+
+#---------------------------------------------------------
+#definición de variables
+CC=g++
+CPPFLAGS=-I. -g -std=c++11      #opciones de compilación
+LDFLAGS=-pthread             #opciones de enlazado (linkado)
+RM=rm -f
+
+all: main_p2_e1
+#-----------------------------------------------------------
+# Compilacion
+main_p2_e1.o: main_p2_e1.cpp
+	${CC} -c main_p2_e1.cpp ${CPPFLAGS}
+#linkado
+main_p2_e1: main_p2_e1.o
+	${CC} main_p2_e1.o -o main_p2_e1 ${LDFLAGS}
+#-----------------------------------------------------------	
+# LIMPIEZA de todo lo generado. OjO: se borrarán sin preguntar
+# RM es una de las variables predefinidas en make: invoca borrado de fichero del SO
+clean:
+	${RM} main_p2_e1.o main_p2_e1
+
