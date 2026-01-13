@@ -1,1 +1,15 @@
+NIP:841886
+Apellidos: Martín González
+Nombre: Rubén
 
+NIP:811019
+Apellidos: Salesa Quintanilla
+Nombre: Sergio
+
+
+Comentario: la principal dificultad a la que nos hemos enfrentado en esta práctica ha sido en el ejercicio 3, para conseguir que el proceso de la desviación típica no empezara hasta que se calculara la media del vector. Al final medinate una variable booleana y un bucle hemos conseguido que el programa no acceda a la sección crítica del proceso hasta que se haya calculado la media.
+
+Comportamiento del ejercicio 1. En la ejecución del primer ejercicio podemos observar en el cout que según como se escriba puede actuar de una forma o de otra. Una forma es hacerlo con una cadena de palabras mediante el símbolo '+', con esto conseguimos que escriba por pantalla toda la cadena de cáracteres a la vez. Mientras que otra forma es mediante '<<', de esta manera va escribiendo los carácteres de uno en uno y si el progrma se interrumpe en mitad podemos observar como se mostrara la cadena de cáracteres de distinta forma a la esperada->"Soy AuroraSoy Baltasar"
+En cuanto a los ejercicio 2 y 3, la solución esta formada por los ficheros ejercicio_2.cpp y ejercicio_3.cpp.  
+
+Por otro lado en la manera de compilarlos para obtener el ejecutable es mediante el código "g++ ejercicio_2.cpp -o ejercicio_2 -std=c++11 -pthread" y "g++ ejercicio_3.cpp -o ejercicio_3 -std=c++11 -pthread"
